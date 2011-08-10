@@ -13,6 +13,7 @@ include _PHBEE_ . '/registry.php';
 include _PHBEE_ . '/utils.php';
 include _PHBEE_ . '/phbee.php';
 include _PHBEE_ . '/view.php';
+include _PHBEE_ . '/mysql.php';
 
 
 /**
@@ -84,6 +85,9 @@ function bootStrap () {
 	// Load routes and find controller/action
 	$reg->routes = $routes;
 	$reg->merge(findRoute($reg->routes));
+
+	// Configure database (no connection is done at this point)
+	PHB_Mysql::config($reg->database);
 
 	// Load controller
 	if (!file_exists(_APP_ . '/controllers/' . $reg->controller . '.php')) {

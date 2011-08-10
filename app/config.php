@@ -8,7 +8,7 @@ $environments = array(
 		'timezone'		=> 'Europe/Rome',
 		
 		'database'		=> array(
-			'dsn'		=> 'mysql:host=localhost;port=8889;dbname=phpbee',
+			'dsn'		=> 'mysql:host=localhost;port=8889;dbname=phbee',
 			'user'		=> 'root',
 			'password'	=> 'root'
 		)
@@ -18,7 +18,7 @@ $environments = array(
 		'timezone'		=> 'America/Los_Angeles',
 		
 		'database'		=> array(
-			'dsn'		=> 'mysql:dbname=phpbee',
+			'dsn'		=> 'mysql:dbname=phbee',
 			'user'		=> 'username',
 			'password'	=> 'password'
 		)
