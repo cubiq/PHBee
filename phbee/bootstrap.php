@@ -29,7 +29,7 @@ function findRoute ($routes) {
 	if (strpos($request, $httpHost) === 0) $request = substr($request, strlen($httpHost));
 
 	// Remove query string if needed
-	$queryString = strpos('?', $request);
+	$queryString = strpos($request, '?');
 	if ($queryString !== false) $request = substr($request, 0, $queryString);
 
 	$result = false;
